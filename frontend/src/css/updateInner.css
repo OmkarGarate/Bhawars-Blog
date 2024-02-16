@@ -1,0 +1,81 @@
+.blogInner .blogImg{
+    width: 200px;
+}
+
+.updateBlog{
+    /* border: 1px solid white; */
+}
+
+.updateBlog .bth{
+    /* margin-bottom: 20px; */
+}
+
+.blog-time img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.dlf{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.blog-time{
+    display: flex;
+    align-items: center;
+}
+
+.updateBlog form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.updateBlog input, .updateBlog select, .updateBlog textarea{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+    /* border: 1px solid white; */
+    /* margin: 10px 0; */
+    font-size: 1rem;
+}
+
+.updateBlog h1{
+    font-size: 1rem;
+}
+
+.delBlog{
+    border: 1px solid white;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    box-shadow: 0px 5px 10px 0px lightgray;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.delBlog:hover{
+    background-color: rgb(255, 233, 233);
+}
+
+.delBlog img{
+    width: 18px;
+    height: 18px;
+}
+
+.ub-btn{
+    text-align: center;
+}
+
+.blgDel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

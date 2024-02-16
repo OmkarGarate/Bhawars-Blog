@@ -1,0 +1,63 @@
+@media (min-width: 1440px) and (max-width: 2560px){
+    .siff {
+        width: 60%;
+        height: 75%;
+        padding: 60px;
+    }
+
+    .fHeading h2{
+        font-size: 3rem;
+    }
+
+    .fDescc {
+        margin-bottom: 85px;
+        font-size: 1.7rem;
+    }
+
+    .RadioBtns {
+        gap: 30px;
+        font-size: 1.7rem;
+    }
+
+    .RadioBtns input{
+        width: 20px;
+    height: 20px;
+    }
+
+    .fEmaill input, .fpasss input{
+        font-size: 1.7rem;
+    }
+
+    .fPassimg {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+
+    .fPassimg img {
+        width: 30px;
+    }
+
+    .fradiobtnhead p{
+        font-size: 1.7rem;
+    }
+
+    .fRadioBtn1 label {
+        gap: 10px;
+        font-size: 1.7rem;
+    }
+
+    .fRadioBtn1 input, .custom_radio{
+        width: 25px;
+        height: 25px;
+        margin-top: 4px;
+    }
+
+
+
+    
+
+
+
+
+}

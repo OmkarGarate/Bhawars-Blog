@@ -1,0 +1,159 @@
+.blog{
+    background-color: #1B3C6E;
+    /* height: 100vh; */
+    /* justify-content: center; */
+    position: relative;
+}
+
+.blogInner{
+    /* border: 1px solid white; */
+    width: 75%;
+    margin:0 auto;
+    /* margin-top: 30px; */
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.blogInner .blogCat{
+    font-size: 1.2rem;
+}
+
+.blogInner p{
+    margin: 0;
+}
+
+.blogInner h1{
+    font-size: 3rem;
+    margin: 15px 0;
+}
+
+.blogInner .bnt{
+    font-size: 1.2rem;
+    display: flex;
+    gap: 50px;
+}
+
+.bnt .timeToRead{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bnt .timeToRead img{
+    width: 20px;
+}
+
+.blogContent{
+    /* border: 1px solid white; */
+    background-color: #00012bbf;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding:50px;
+    /* height: 500px; */
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blogContent .bcHead{
+    font-size: 2rem;
+    /* margin: 20px 0; */
+}
+
+.reactions{
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+.reactions img{
+    width: 30px;
+}
+
+.reactions .like{
+    /* border: 1px solid white; */
+    background-color: white;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px #9A9A9A;
+    cursor: pointer;
+}
+
+.like img{
+    width: 30px;
+}
+
+.comment{
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #9A9A9A;
+}
+
+.comment input{
+    padding: 5px;
+    width: 350px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    /* border-bottom: 1px solid white; */
+}
+
+.comment ::placeholder{
+    color: #9A9A9A;
+}
+
+.comment img{
+    transform: rotate(90deg);
+    width: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.comment img:hover{
+    transform: rotate(210deg);
+}
+
+.likedCount{
+    /* border: 1px solid red; */
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+.likedCount i{
+    /* border: 1px solid white; */
+    /* position: absolute; */
+    color: lightgray;
+}
+
+.comments{
+    /* border: 1px solid white; */
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comments .cmt{
+    color: white;
+    /* border: 1px solid white; */
+}

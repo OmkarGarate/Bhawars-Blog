@@ -1,0 +1,310 @@
+.signIn,
+.createAc {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+p{
+    margin: 0;
+}
+
+.sil {
+  /* border: 1px solid black; */
+  background-color: #1c3d6c;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sir {
+  /* border: 1px solid black; */
+  width: 40%;
+  height: 100%;
+  /* background-color: #1c3d6c8c;
+  opacity: 60%; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sirbgimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sif {
+  /* border: 1px solid black; */
+  width: 55%;
+  height: 65%;
+  background-color: #001434b8;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+}
+
+.siff {
+  width: 56%;
+  height: 77%;
+}
+
+.fHeading {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.fDesc {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.fDescc {
+  margin-bottom: 85px;
+}
+
+.fDesc a {
+  color: #00f5ff;
+  margin-left: 5px;
+}
+
+.fEmail {
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+.fEmaill {
+  margin-left: 10px;
+}
+
+.fEmail input {
+  width: 100%;
+  padding: 1px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: white;
+}
+
+.fEmail input::placeholder {
+  color: white;
+}
+
+.fPass {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.fpasss {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.fPass input {
+  width: 100%;
+  padding: 1px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: white;
+}
+
+.fPass input::placeholder {
+  color: white;
+}
+
+.fPassimg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.fPassimg img {
+  /* border: 1px solid black; */
+  position: absolute;
+  width: 20px;
+}
+
+.fCountry {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 13px;
+}
+
+.fRadioBtn,
+.fRadioBtn1 {
+  display: flex;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  color: white;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+}
+
+.fRadioBtn1 {
+  align-items: start;
+  /* margin-bottom: 1px; */
+  padding-left: 10px;
+  margin: 10px 0;
+
+  /* border: 1px solid white; */
+}
+
+.fRadioBtn label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.fRadioBtn1 label {
+  display: flex;
+  align-items: flex-start;
+  /* gap: 5px; */
+  font-size: 0.7rem;
+}
+
+.fRadioBtn1 span {
+  color: #0093ff;
+  margin: 0 2px;
+}
+
+.custom-radio {
+  /* Adjust the size according to your preference */
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.custom_radio {
+  width: 8px;
+  height: 8px;
+  margin-top: 2px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.fradiobtnhead {
+  margin-left: 10px;
+  /* margin-bottom: 25px; */
+  color: white;
+  font-size: 10px;
+}
+
+.fradiobtnhead span {
+  color: #0093ff;
+}
+
+.fExpBtn {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.fExpBtn1 {
+  text-align: right;
+  padding-top: 35px;
+}
+
+.fExpBtn button {
+  padding: 6px 15px;
+  background: transparent
+    linear-gradient(99deg, #009daa 0%, #310bfd 40%, #0f82d6 100%) 0% 0%
+    no-repeat padding-box;
+  border-radius: 53px;
+  opacity: 1;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.fExpBtn button {
+  padding: 5px 10px;
+}
+
+.fOrTxt {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.fGFBtns {
+  display: flex;
+  flex-direction: column;
+}
+
+.fbtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.ffbtn {
+  background-color: #006af0;
+  color: white;
+}
+
+.fbtns img {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.fCountry .css-13cymwt-control, .fCountry .css-t3ipsp-control, .css-1nmdiq5-menu {
+  padding: 1px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  color: white;
+  margin-left: 35px;
+  width: 165px;
+  border-radius: 0;
+}
+
+.fCountry .css-1fdsijx-ValueContainer {
+  padding: 0;
+}
+
+.fCountry .css-1hb7zxy-IndicatorsContainer {
+  display: block;
+}
+
+.RadioBtns{
+  /* border: 1px solid white; */
+  color: white;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.RadioBtns div{
+  cursor: pointer;
+}

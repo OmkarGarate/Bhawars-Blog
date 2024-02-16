@@ -1,0 +1,340 @@
+@media (min-width: 320px) and (max-width: 765px){
+     .createAc{
+        display: flex;
+        flex-direction: column;
+     }
+
+     .sif {
+
+        width: 77%;
+        height: 85%;
+        padding: 20px;
+        margin: 20px 0 0 0;
+    }
+
+    .sirbgimg {
+        height: 100%;
+    }
+
+    .fDesc {
+        font-size: 0.8rem;
+    }
+
+    .RadioBtns {
+        font-size: 0.8rem;
+    }
+
+    .RadioBtns div{
+        display: flex;
+    align-items: center;
+    }
+
+    .fEmail {
+        margin-bottom: 20px;
+    }
+
+    .fEmaill ::placeholder, .fpasss ::placeholder{
+        font-size: 0.8rem;
+    }
+
+    .fPassimg {
+        width: 15px;
+        height: 15px;
+        right: 10px;
+    }
+
+    .fPassimg img {
+        width: 15px;
+    }
+
+    .fradiobtnhead {
+        font-size: 0.7rem;
+    }
+
+    .custom_radio {
+        width: 15px;
+        height: 15px;
+        margin-top: 0px;
+    }
+
+    .fRadioBtn1 label {
+        font-size: 0.7rem;
+    }
+
+    .fExpBtn{
+        padding-bottom: 0;
+    }
+
+    .fExpBtn1 {
+        padding-top: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .sil img {
+        width: 220px;
+    }
+
+    .sif {
+        /* border: 1px solid black; */
+        width: 71%;
+        height: 75%;
+        padding: 20px;
+    }
+
+    .fHeading h2 {
+        font-size: 1.4rem;
+    }
+
+    .fDesc {
+        font-size: 0.7rem;
+    }
+
+    .RadioBtns {
+        font-size: 0.7rem;
+    }
+
+    .RadioBtns div{
+        display: flex;
+    align-items: center;
+    }
+
+    .fRadioBtn, .fRadioBtn1 {
+        margin-bottom: 5px;
+    }
+
+    .fEmaill ::placeholder, .fpasss ::placeholder{
+        font-size: 0.7rem;
+    }
+
+    .fPassimg {
+        width: 15px;
+        height: 15px;
+        right: 10px;
+    }
+
+    .fPassimg img {
+        width: 15px;
+    }
+
+    .fradiobtnhead {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    .custom_radio {
+        width: 15px;
+        height: 15px;
+    }
+
+    .fExpBtn1 {
+        padding-top: 20px;
+    }
+
+    .fExpBtn button {
+        font-size: 0.7rem;
+    }
+
+
+    .fRadioBtn1 label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .sil img {
+        width: 280px;
+    }
+
+    .sif {
+        /* border: 1px solid black; */
+        width: 70%;
+        height: 77%;
+        padding: 25px;
+    }
+
+    .fDesc {
+        font-size: 0.8rem;
+    }
+
+    .fDescc {
+        margin-bottom: 25px;
+    }
+
+    .RadioBtns {
+        font-size: 0.8rem;
+    }
+
+    .RadioBtns div{
+        display: flex;
+    align-items: center;
+    }
+
+    .fEmaill ::placeholder, .fpasss ::placeholder{
+        font-size: 0.8rem;
+    }
+
+    .fradiobtnhead {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .custom_radio {
+        width: 15px;
+        height: 15px;
+        margin-top: 1px;
+    }
+
+    .fRadioBtn1 label {
+        font-size: 0.8rem;
+    }
+
+    .fExpBtn1 {
+        padding-top: 10px;
+    }
+
+    .fExpBtn button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1536px){
+
+    .sil img {
+        width: 350px;
+    }
+
+    .sif {
+        /* border: 1px solid black; */
+        width: 65%;
+        height: 76%;
+    }
+
+    .fDescc {
+        margin-bottom: 25px;
+    }
+
+    .fDesc {
+        font-size: 0.9rem;
+    }
+
+    .RadioBtns {
+        font-size: 0.9rem;
+    }
+
+    .RadioBtns div{
+        display: flex;
+    align-items: center;
+    }
+
+    .fEmaill ::placeholder, .fpasss ::placeholder{
+        font-size: 0.9rem;
+    }
+
+    .custom_radio {
+        width: 15px;
+        height: 15px;
+        margin-top: 1px;
+    }
+
+
+    .fradiobtnhead {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        /* margin-top: 5px; */
+    }
+
+    .fRadioBtn1 label{
+        font-size: 0.9rem;
+    }
+
+    .fExpBtn1 {
+        padding-top: 10px;
+    }
+}
+
+@media (min-width: 1537px) and (max-width: 2560px){
+    .siff {
+        width: 64%;
+        height: 76%;
+        padding: 60px;
+    }
+
+    .fHeading h2{
+        font-size: 2.9rem;
+    }
+
+    .fHeading {
+        margin-bottom: 10px;
+    }
+
+    .fDescc {
+        margin-bottom: 35px;
+        font-size: 1.6rem;
+    }
+
+    .RadioBtns {
+        gap: 30px;
+        font-size: 1.6rem;
+    }
+
+    .RadioBtns div{
+        display: flex;
+    align-items: center;
+    }
+
+    .fEmaill ::placeholder, .fpasss ::placeholder{
+        font-size: 1.6rem;
+    }
+
+    /* .custom_radio {
+        width: 15px;
+        height: 15px;
+        margin-top: 1px;
+    } */
+
+    .RadioBtns input{
+        width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    }
+
+    .fEmaill input, .fpasss input{
+        font-size: 1.7rem;
+    }
+
+    .fPassimg {
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+
+    .fPassimg img {
+        width: 30px;
+    }
+
+    .fradiobtnhead p{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .fRadioBtn1 label {
+        gap: 10px;
+        font-size: 1.6rem;
+    }
+
+    .fRadioBtn1 input, .custom_radio{
+        width: 25px;
+        height: 25px;
+        margin-top: 4px;
+    }
+
+    .fRadioBtn, .fRadioBtn1 {
+        margin-bottom: 10px;
+    }
+
+    .fExpBtn1 {
+        padding-top: 20px;
+    }
+}

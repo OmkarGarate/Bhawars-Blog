@@ -1,0 +1,155 @@
+.error{
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.success{
+    color: rgb(0, 255, 0);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sinr{
+    color: #1B3C6E;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 0px #041b3d;
+    transition: 0.3s ease-in-out;
+}
+
+.sinr:hover{
+    box-shadow: none;
+    transform: translate(5px, 5px);
+    /* color: #041b3d; */
+}
+
+
+
+.searchKey{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;;
+    padding: 5px 10px;
+    width: 30%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.searchKey img{
+    width: 20px;
+}
+
+.searchKey input{
+    background-color: transparent;
+    /* border: 1px solid black; */
+    border: none;
+    padding: 5px 10px;
+    caret-color: white;
+    color: white;
+    width: 100%;
+}
+
+.searchKey ::placeholder{
+    color: white;
+    text-align: center;
+}
+
+.UAllBlogs{
+    position: relative;
+}
+
+.searchedEle{
+    width: 30%;
+    margin: 10px auto;
+    /* padding: 10px; */
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: absolute;
+    left: 35%;
+    z-index: 1;
+}
+
+.searchedEle li{
+    list-style: none;
+    margin: 5px 10px;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    /* display: block; */
+    padding-left: 10px;
+}
+
+.searchedEle a{
+    text-decoration: none;
+    text-align: left;
+}
+
+.searchBox{
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; */
+}
+
+.searchBox h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.searchBox i{
+    margin: 20px 0;
+    display: block;
+    margin-top: 10px;
+}
+
+.sb{
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: max-content;
+    background-color: #ffffff53;
+}
+
+.sb img{
+    width: 20px;
+}
+
+/* Blog page css */
+.blogPage{
+    color: white;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.blogPage a{
+    color: white;
+    border: 1px solid white;
+    /* display: flex;
+    /* align-items: center; */
+    /* justify-content: center;  */
+}
+
+.blogPage ul li{
+    list-style: none;
+}
+
+.blogPage img{
+    width: 300px;
+}
