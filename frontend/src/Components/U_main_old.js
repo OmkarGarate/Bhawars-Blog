@@ -12,6 +12,7 @@ import FnP from './FnP'
 import BlogSlider from './BlogSlider'
 import RandomRead from './RandomRead'
 import BFooter from './BFooter'
+import { useAuthContext } from '../hooks/useAuthContext';
 
 function U_main() {
   const [blogs, setBlogs]=useState(null)
@@ -19,6 +20,7 @@ function U_main() {
   const [seStyle, setSeStyle] = useState({
     'padding': '0'
   })
+  const { user } = useAuthContext();
 
     useEffect(() => {
         const fetchBlogs = async ()=>{
@@ -29,8 +31,7 @@ function U_main() {
                 setBlogs(json)
             }
         }
-            fetchBlogs()
-        
+          fetchBlogs()  
     }, [])
     console.log(searchQuery)
   

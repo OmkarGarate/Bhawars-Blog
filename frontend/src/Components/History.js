@@ -1,6 +1,6 @@
 // import React from 'react'
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import sampleimg from "../Images/sampleimg.jpg";
 import tri_latest_g from "../Images/tri_latest_g.png";
 import fire_f from "../Images/fire_f.png";
@@ -231,6 +231,8 @@ switch (windowWidth) {
 
   console.log(n);
   console.log(Math.ceil(events.length / 5));
+  const location = useLocation(); // This gives you the current path
+console.log("Current URL path:", location.pathname);
   return (
     <>
       <div className="lph lphNew">
@@ -240,45 +242,54 @@ switch (windowWidth) {
           <strong>Event</strong> Listing
         </h1> */}
           <ul className="me-ev">
-            <li style={ltStyle} onClick={() => handleLatestUp("latest")}>
+          <Link
+                to={`${location.pathname}`}
+                
+              >
+            <li style={ltStyle}>
               <div className="triangle_latest">
                 <img src={ltStyle.image} alt="" />
               </div>
-              <Link
-                to={"/"}
-                style={{
+              <p style={{
                   color: ltStyle.color === "white" ? "#2EF04C" : "#1B3C6E",
-                }}
-              >
-                Latest Up
-              </Link>
+                }}>
+                  Latest Up
+                </p>
+                
+              
 
               {/* <div className="underline"></div> */}
             </li>
-            <li style={popStyle} onClick={() => handleLatestUp("popular")}>
-              <img src={popStyle.image} alt="" />
-              <Link
-                to={"/"}
-                style={{
-                  color: popStyle.color === "white" ? "#1B3C6E" : "#FF9D00",
-                }}
+            </Link>
+            <Link
+                to={location.pathname === '/' ? `${location.pathname}popular` : `${location.pathname}/popular`}
               >
+            <li style={popStyle}>
+              <img src={popStyle.image} alt="" />
+              <p
+              style={{
+                color: popStyle.color === "white" ? "#1B3C6E" : "#FF9D00",
+              }}>
                 Popular
-              </Link>
+              </p>
+                
+              
               {/* <div className="underline" style={{width: "100%"}}></div> */}
             </li>
-            <li style={hisStyle} onClick={() => handleLatestUp("history")}>
-              <img src={hisStyle.image} alt="" />
-              <Link
-                to={"/"}
-                style={{
-                  color: hisStyle.color === "white" ? "#9A9A9A" : "#1B3C6E",
-                }}
+            </Link>
+            <Link
+                to={`${location.pathname}/history`}
               >
+            <li style={hisStyle}>
+              <img src={hisStyle.image} alt="" />
+              <p
+              style={{
+                color: hisStyle.color === "white" ? "#9A9A9A" : "#1B3C6E",
+              }}>
                 History
-              </Link>
-              {/* <div className="underline"></div> */}
+              </p>
             </li>
+            </Link>
           </ul>
           <div className="ELbtns">
             <button className="prev" onClick={goToPrev}>

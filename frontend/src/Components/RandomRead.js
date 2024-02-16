@@ -36,6 +36,7 @@ function RandomRead() {
     const randomData = blogs[randomIndex];
     setData(randomData);
   };
+  console.log("rd: ", data)
 
   return (
     <>
@@ -49,14 +50,14 @@ function RandomRead() {
             {data===''?(
               <div className="showRandom">Click to generate random blog</div>
             ):
-              (<div className='fContent'>
+              (<Link  to={`/user/blog/${data._id}`} className='fContent'>
                 <img src={`http://localhost:3000/uploads/${data.contentImage}`} alt="contentImage" />
             <div className="fTheory">
               <i>{data.category}</i>
               <h1>{data.blogHead}</h1>
               <p>{data.contentDesc}</p>
             </div>
-              </div>)
+              </Link>)
             }
           
           </div>

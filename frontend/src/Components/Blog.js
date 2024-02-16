@@ -35,8 +35,8 @@ function Blog({bth}) {
     
 
     useEffect(() => {
+            fetchBlogs();
         
-        fetchBlogs();
 
         if (bth === "admin") {
             setBackToHome('/dashboard');
@@ -44,7 +44,7 @@ function Blog({bth}) {
     }, [id, bth]);
 
     useEffect(() => {
-        if (blogs) {
+        if (blogs && user) {
             const likedUser = blogs.likes.some(like => like.toString() === user.user._id.toString());
             setLiked(likedUser ? false : true);
         }
@@ -171,6 +171,16 @@ function Blog({bth}) {
                     <p>Loading....</p>
                 )}
             </div>
+            {!user? (
+                <div className="blurBlog">
+                <Link to={backToHome} className="bth">
+                        Back to home
+                    </Link>
+                    Sign in to See Blog
+                    <Link to={'/login'} className='sinr'>Sign In</Link>
+                </div>
+            ):(null)}
+            
             <img src={bgImg2} alt="bgImg2" className="bgImg1 bgImg2" />
         </div>
     );

@@ -90,6 +90,7 @@ const handleClick = async ()=>{
   if(!user){
     return
   }
+  alert('Blog Deleted Successfully!!')
   const response = await fetch(`/blogs/${id}`, {
     method: 'DELETE'
   })

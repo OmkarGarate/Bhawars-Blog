@@ -55,10 +55,9 @@ export default function ManageBlogs() {
                         <div className="ltd content-short2">{blog.contentDesc}</div>
                         
                     </div>
-                    {/* <div className="edit_btns">
-                            <button><img src={editIcon} alt="" /></button>
-                            <button><img src={deleteIcon} alt="" /></button>
-                    </div> */}
+                    <div className="edit_btns">
+                            <button><img src={editIcon} alt="editIcon" /></button>
+                    </div>
                 </Link> 
             ))}
                 

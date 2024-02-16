@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import sampleimg from "../Images/sampleimg.jpg";
 import tri_latest_g from "../Images/tri_latest_g.png";
 import fire_f from "../Images/fire_f.png";
@@ -11,7 +11,7 @@ import rgt_arrow_btn from "../Images/rgt_arrow_btn.png";
 import left_arrow_btn from "../Images/left_arrow_btn.png";
 import { useAuthContext } from '../hooks/useAuthContext';
 
-function PopularUp() {
+function PopularUp({cat}) {
     const [ltStyle, setLtStyle] = useState({
         "backgroundColor": "transparent",
         "box-shadow": "none",
@@ -39,22 +39,26 @@ function PopularUp() {
     const { user } = useAuthContext();
 
     useEffect(() => {
-        const fetchBlogs = async () => {
-            try {
-                const response = await fetch("/blogs");
-                if (!response.ok) {
-                    throw new Error('Failed to fetch blogs');
-                }
-                const fetchedBlogs = await response.json();
-                setBlogs(Array.isArray(fetchedBlogs) ? fetchedBlogs : []);
-            } catch (error) {
-                console.error('Error fetching blogs:', error);
-            }
-        };
-        
-        fetchBlogs();
+      const fetchBlogs = async () => {
+          try {
+              const response = await fetch("/blogs");
+              if (!response.ok) {
+                  throw new Error('Failed to fetch blogs');
+              }
+              const fetchedBlogs = await response.json();
+              // Sort blogs by likes in descending order
+              const sortedBlogs = fetchedBlogs.sort((a, b) => b.likes.length - a.likes.length);
+              const filteredBlogs = sortedBlogs.filter(blog => blog.category === cat);
+              // Get top 3 blogs
+              const top3Blogs = filteredBlogs.slice(0, 3);
+              setBlogs(top3Blogs);
+          } catch (error) {
+              console.error('Error fetching blogs:', error);
+          }
+      };
 
-    }, []);
+      fetchBlogs();
+  }, []);
 
     console.log(blogs);
     
@@ -96,6 +100,26 @@ const goToNext = () => {
 
 console.log(n);
 console.log(Math.ceil(numberOfBlogs / 2));
+
+
+const cats = [
+  { cat: "2D Sol", pathP: '/popular', pathL: '/' },
+  { cat: "As Built", pathP: '/asbuilt/popular', pathL: '/asbuilt' },
+  { cat: "Process Engineering", pathP: '/procegg/popular', pathL: '/procegg' },
+  { cat: "Model 3D", pathP: '/model3d/popular', pathL: '/model3d' },
+  { cat: "Corporate", pathP: '/corp/popular', pathL: '/corp' },
+  { cat: "Miscellaneous", pathP: '/misc/popular', pathL: '/misc' },
+  { cat: "Reverse Engineering", pathP: '/reverse/popular', pathL: '/reverse' },
+  { cat: "Analysis", pathP: '/analysis/popular', pathL: '/analysis' },
+  { cat: "Detailed Design", pathP: '/detdes/popular', pathL: '/detdes' },
+  { cat: "Office Life", pathP: '/officelife/popular', pathL: '/officelife' }
+];
+
+
+// Find the corresponding path for the given cat
+const catPathP = cats.find(c => c.cat === cat)?.pathP || '';
+const catPathL = cats.find(c => c.cat === cat)?.pathL || '';
+
   return (
     <>
     <div className="me">
@@ -103,45 +127,54 @@ console.log(Math.ceil(numberOfBlogs / 2));
           <strong>Event</strong> Listing
         </h1> */}
           <ul className="me-ev">
+          <Link
+                to={catPathL}
+                
+              >
             <li style={ltStyle}>
               <div className="triangle_latest">
                 <img src={ltStyle.image} alt="" />
               </div>
-              <Link
-                to={"/"}
-                style={{
+              <p style={{
                   color: ltStyle.color === "white" ? "#2EF04C" : "#1B3C6E",
-                }}
-              >
-                Latest Up
-              </Link>
+                }}>
+                  Latest Up
+                </p>
+                
+              
 
               {/* <div className="underline"></div> */}
             </li>
+            </Link>
+            <Link
+                to={catPathP}
+              >
             <li style={popStyle}>
               <img src={popStyle.image} alt="" />
-              <Link
-                to={"/popular"}
-                style={{
-                  color: popStyle.color === "white" ? "#1B3C6E" : "#FF9D00",
-                }}
-              >
+              <p
+              style={{
+                color: popStyle.color === "white" ? "#1B3C6E" : "#FF9D00",
+              }}>
                 Popular
-              </Link>
+              </p>
+                
+              
               {/* <div className="underline" style={{width: "100%"}}></div> */}
             </li>
+            </Link>
+            <Link
+                to={'/history'}
+              >
             <li style={hisStyle}>
               <img src={hisStyle.image} alt="" />
-              <Link
-                to={"/history"}
-                style={{
-                  color: hisStyle.color === "white" ? "#9A9A9A" : "#1B3C6E",
-                }}
-              >
+              <p
+              style={{
+                color: hisStyle.color === "white" ? "#9A9A9A" : "#1B3C6E",
+              }}>
                 History
-              </Link>
-              {/* <div className="underline"></div> */}
+              </p>
             </li>
+            </Link>
           </ul>
           <div className="ELbtns">
             <button className="prev" onClick={goToPrev}>
@@ -159,14 +192,14 @@ console.log(Math.ceil(numberOfBlogs / 2));
             {group.map((eve, index) => (
               <div className="elEve" key={index}>
                 {eve && (
-                  <div className="fContent">
+                  <Link to={`/user/blog/${eve?._id}`} className="fContent">
                     <img src={`http://localhost:3000/uploads/${eve.contentImage}`} alt="" />
                     <div className="fTheory">
                       <i>{eve.category}</i>
                       <h1>{eve.blogHead}</h1>
                       <p>{eve.contentDesc}</p>
                     </div>
-                  </div>
+                  </Link>
                 )}
               </div>
             ))}

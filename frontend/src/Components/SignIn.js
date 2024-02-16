@@ -11,7 +11,7 @@ import '../css/user.css'
 import { Link, useNavigate } from "react-router-dom";
 import {useLoginUser} from '../hooks/useLoginUser.js'
 import {useLoginAdmin} from '../hooks/useLoginAdmin.js'
-
+import { useAuthContext } from '../hooks/useAuthContext';
 
 
 function SignIn() {
@@ -38,70 +38,61 @@ function SignIn() {
     );
   };
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const vClick = () => {
     setIsVisible(false);
+    setPassInput("password")
   };
 
   const hClick = () => {
     setIsVisible(true);
+    setPassInput("text")
   };
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [userType, setUserType] = useState('')
   const [secretKey, setSecretKey] = useState('')
-  // const [error, setError] = useState("");
+  const [errorM, setErrorM] = useState('');
   const [conf, setConf] = useState("");
   const {loginUser, errorU, isLoadingU} = useLoginUser()
   const {loginAdmin, error, isLoading} = useLoginAdmin()
+  const { user } = useAuthContext();
+  const [passInput, setPassInput] = useState('password')
 
-  const handleSubmit = async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if(userType === "User")
-    {
-      
-      try{
-        await loginUser(email, password)
-        console.log('Successfully Logged in as an User', email, password);
-        
-       
-      }catch(err){
-        console.log(err);
+  
+    if (userType === "User") {
+      await loginUser(email, password);
+      if (errorU === null) {
+        console.log('Successfully Logged in as a User', email, password);
+        setConf("Successfully Logged In as a User");
+        setErrorM(false)
+        setTimeout(() => {
+          navigate('/');
+        }, 2000);
+      } else {
+        setErrorM(errorU)
+        console.log('Credentials not matching', errorU);
       }
-      if(!errorU)
-       {
-        setConf("Successfully Logged In as an User")
-          setTimeout(() => {
-            navigate('/');
-          }, 2000);
-        }
-       
-      
-      
-    } else{
-      // const userData = {email, password, secretKey};
-
-      try{
-        await loginAdmin(email, password, secretKey)
+    } else {
+      await loginAdmin(email, password, secretKey);
+      if (error === null) {
         console.log('Successfully Logged in as an Admin', email, password, secretKey);
-        
-       
-      }catch(err){
-        console.log(err);
-      }
-      if(!error)
-      {
-        setConf("Successfully Logged In as an Admin")
+        setConf("Successfully Logged In as an Admin");
+        setErrorM(false)
         setTimeout(() => {
           navigate('/dashboard');
         }, 2000);
+      } else {
+        setErrorM(error)
+        console.log('Credentials not matching', errorU);
       }
-      
     }
   }
+  
 
   return (
     <>
@@ -131,31 +122,31 @@ function SignIn() {
               <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
             </div>
             <div className="fPass">
-              <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
+              <input type={passInput} placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
               <div className="fPassimg">
                 {isVisible ? (
                   <img
-                    className="view"
-                    src={view_pass}
-                    alt=""
-                    onClick={vClick}
-                  />
+                  className="view"
+                  src={view_pass}
+                  alt="view_pass"
+                  onClick={vClick}
+                />
                 ) : (
                   <img
-                    className="hide"
-                    src={hide_pass}
-                    alt=""
-                    onClick={hClick}
-                  />
+                  className="hide"
+                  src={hide_pass}
+                  alt="hide_pass"
+                  onClick={hClick}
+                />
                 )}
               </div>
             </div>
-            <div className="fRadioBtn">
+            {/* <div className="fRadioBtn">
               <SingleRadioButton />
-            </div>
+            </div> */}
             <div className="fExpBtn">
                 <button>Let's explore</button>
-                {!error!= '' ?(<div className="success">{conf}</div>) : (<div className="error">{error}</div>) }
+                {!errorM!= '' ?(<div className="success">{conf}</div>) : (<div className="error">{errorM}</div>) }
             </div>
             <div className="fOrTxt">
                 <p>Or you can</p>
