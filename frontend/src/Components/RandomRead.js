@@ -28,7 +28,7 @@ function RandomRead() {
         fetchBlogs();
     }, []);
 
-    console.log(blogs);
+    // // console.log(blogs);
 
 
   const handleShuffle = () => {
@@ -36,7 +36,7 @@ function RandomRead() {
     const randomData = blogs[randomIndex];
     setData(randomData);
   };
-  console.log("rd: ", data)
+  // console.log("rd: ", data)
 
   return (
     <>

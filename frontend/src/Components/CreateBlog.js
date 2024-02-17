@@ -29,7 +29,7 @@ function CreateBlog() {
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  console.log(selectedCategory)
+  // console.log(selectedCategory)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +48,7 @@ function CreateBlog() {
       });
 
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
 
       if (!response.ok) {
         setError(json.error || "Failed to create blog post");
@@ -60,7 +60,7 @@ function CreateBlog() {
         setContentImage(null);
         setError(null);
         setConf("Successfully created a blog")
-        console.log("New blog added", json);
+        // console.log("New blog added", json);
       }
     } catch (error) {
       console.error("Error during form submission:", error);

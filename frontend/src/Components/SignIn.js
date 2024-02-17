@@ -63,11 +63,9 @@ function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    if (userType === "User") {
       await loginUser(email, password);
       if (errorU === null) {
-        console.log('Exploring in as a User', email, password);
+        // console.log('Exploring in as a User', email, password);
         setConf("Exploring In as an User");
         setErrorM(false)
         setTimeout(() => {
@@ -75,22 +73,8 @@ function SignIn() {
         }, 2000);
       } else {
         setErrorM(errorU)
-        console.log('Credentials not matching', errorU);
+        // console.log('Credentials not matching', errorU);
       }
-    } else {
-      await loginAdmin(email, password, secretKey);
-      if (error === null) {
-        console.log('Exploring in as an Admin', email, password, secretKey);
-        setConf("Exploring In as an Admin");
-        setErrorM(false)
-        setTimeout(() => {
-          navigate('/dashboard');
-        }, 2000);
-      } else {
-        setErrorM(error)
-        console.log('Credentials not matching', errorU);
-      }
-    }
   }
   
   return (
@@ -108,15 +92,9 @@ function SignIn() {
             <div className="fDesc">
               <span>New Member?</span><Link to={'/register'}> Create an account</Link>
             </div>
-            <div className="RadioBtns">
+            {/* <div className="RadioBtns">
               <div><input type="radio" name="userType" value="User" onChange={(e)=>setUserType(e.target.value)}/ >User</div>
-              <div><input type="radio" name="userType" value="Admin" onChange={(e)=>setUserType(e.target.value)}/>Admin</div>
-            </div>
-            {userType==="Admin"?
-              <div className="fEmail fEmaill">
-                <input type="text" placeholder="Secret key" onChange={(e)=>setSecretKey(e.target.value)}/>
-              </div> : null
-            }
+            </div> */}
             <div className="fEmail">
               <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
             </div>

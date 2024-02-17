@@ -14,7 +14,7 @@ import useSignup from "../hooks/useSignup";
 
 
 function CreateAc() {
-
+  const [passInput, setPassInput] = useState('password')
   const navigate = useNavigate();
 
   const SingleRadioButton = () => {
@@ -64,14 +64,16 @@ function CreateAc() {
       </label>
     );
   };
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const vClick = () => {
     setIsVisible(false);
+    setPassInput("password")
   };
 
   const hClick = () => {
     setIsVisible(true);
+    setPassInput("text")
   };
 
 
@@ -79,7 +81,7 @@ function CreateAc() {
   const [firstName, setFName] = useState('')
   const [lastName, setLName] = useState('')
   const [password, setPassword] = useState('')
-  const [userType, setUserType] = useState('')
+  const [userType, setUserType] = useState('User')
   const [secretKey, setSecretKey] = useState(null)
   const [likes, setLikes] = useState({})
   const [conf, setConf] = useState("");
@@ -114,15 +116,15 @@ function CreateAc() {
               <span>Already Member?</span>
               <Link to={'/login'}>Sign in</Link>
             </div>
-            <div className="RadioBtns">
+            {/* <div className="RadioBtns">
               <div><input type="radio" name="userType" value="User" onChange={(e)=>setUserType(e.target.value)}/>User</div>
               <div><input type="radio" name="userType" value="Admin" onChange={(e)=>setUserType(e.target.value)}/>Admin</div>
-            </div>
-            {userType==="Admin"?
+            </div> */}
+            {/* {userType==="Admin"?
               <div className="fEmail fEmaill">
                 <input type="text" placeholder="Secret key" onChange={(e)=>setSecretKey(e.target.value)}/>
               </div> : null
-            }
+            } */}
             <div className="fEmail fEmaill">
               <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
             </div>
@@ -133,7 +135,7 @@ function CreateAc() {
               <input type="text" placeholder="Last name" onChange={(e)=>setLName(e.target.value)}/>
             </div>
             <div className="fPass fpasss">
-              <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
+              <input type={passInput} placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
               <div className="fPassimg">
                 {isVisible ? (
                   <img

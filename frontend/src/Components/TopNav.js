@@ -19,7 +19,7 @@ function TopNav() {
   };
   
 
-  {user?console.log(user.user.email): console.log("hellow")}
+  // {user?console.log(user.user.email): console.log("hellow")}
   
   return (
     <div className='topNav'>

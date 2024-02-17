@@ -15,14 +15,14 @@ function BlogPage() {
 
             if(response.ok){
                 setBlogs(json)
-                console.log(json.likes)
+                // console.log(json.likes)
             }
         }
             fetchBlogs()
         
     }, [])
     
-    console.log(blogs)
+    // console.log(blogs)
   return (
     <div className='blogPage'>
         {blogs ? (

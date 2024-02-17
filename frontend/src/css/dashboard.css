@@ -306,6 +306,7 @@ body::-webkit-scrollbar {
 
 .uiDesc i{
     color: white;
+    
 }
 
 .user_cont{
@@ -324,6 +325,7 @@ body::-webkit-scrollbar {
     /* align-items: center;*/
     justify-content: space-around;
     /* overflow: hidden; */
+    /* color:#b7cff3; */
 }
 
 .blog-d p{
@@ -338,6 +340,7 @@ display: -webkit-box;
 
 .all_blogs a{
     text-decoration: none;
+    color: #b7cff3;
 }
 
 .content-short2 {

@@ -42,7 +42,7 @@ export default function UpdateInner() {
       }
       
     }, [id, user])
-    console.log(blog)
+    // console.log(blog)
     // var result=0.008*blog.description.split(" ").length;
 
 //To update the data
@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
         setError(json.error || "Failed to update blog post");
       } else {
         setError(null);
-        console.log("Updated blog post", json);
+        // console.log("Updated blog post", json);
         setConf("Successfully Updated a blog")
       }
     } catch (error) {
@@ -129,7 +129,7 @@ const handleFeatured = async () => {
       setFeatured('Featured');
   
       // Log the featured blog data
-      console.log("Featured blog:", json);
+      // console.log("Featured blog:", json);
     } catch (error) {
       // Handle any errors that occur during the process
       console.error("Error setting blog as featured:", error);

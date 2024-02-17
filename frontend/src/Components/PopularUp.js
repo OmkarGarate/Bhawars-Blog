@@ -60,7 +60,7 @@ function PopularUp({cat}) {
       fetchBlogs();
   }, []);
 
-    console.log(blogs);
+    // console.log(blogs);
     
       const [slide, setSlide] = useState({
         transform: "translateX(0px)",
@@ -98,8 +98,8 @@ const goToNext = () => {
     });
 };
 
-console.log(n);
-console.log(Math.ceil(numberOfBlogs / 2));
+// console.log(n);
+// console.log(Math.ceil(numberOfBlogs / 2));
 
 
 const cats = [

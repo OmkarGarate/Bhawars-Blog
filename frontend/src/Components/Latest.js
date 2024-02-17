@@ -14,7 +14,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 function Latest({cat}) {
     const [ltStyle, setLtStyle] = useState({
         "backgroundColor": "#2EF04C",
-        "box-shadow": "0px 0px 10px #2EF04C",
+        "boxShadow": "0px 0px 10px #2EF04C",
         border: "1px solid #2EF04C",
         color: "#2EF04C",
         image: tri_latest,
@@ -23,12 +23,12 @@ function Latest({cat}) {
         "backgroundColor": "transparent",
         border: "1px solid #FF9D00",
         color: "#FF9D00",
-        "box-shadow": "none",
+        "boxShadow": "none",
         image: fire_f,
       });
       const [hisStyle, setHisStyle] = useState({
         "backgroundColor": "transparent",
-        "box-shadow": "none",
+        "boxShadow": "none",
         border: "1px solid #9A9A9A",
         color: "white",
         image: history,
@@ -37,7 +37,7 @@ function Latest({cat}) {
       const [blogs, setBlogs] = useState(null);
     const { user } = useAuthContext();
     const location = useLocation(); // This gives you the current path
-console.log("Current URL path:", location.pathname);
+// console.log("Current URL path:", location.pathname);
 
 const cats = [
   { cat: "2D Sol", pathP: '/popular', pathL: '/' },
@@ -78,7 +78,7 @@ const catPathL = cats.find(c => c.cat === cat)?.pathL || '';
 
     }, []);
 
-    console.log(blogs);
+    // console.log(blogs);
     
       const [slide, setSlide] = useState({
         transform: "translateX(0px)",
@@ -116,8 +116,8 @@ const goToNext = () => {
     });
 };
 
-console.log(n);
-console.log(Math.ceil(numberOfBlogs / 2));
+// console.log(n);
+// console.log(Math.ceil(numberOfBlogs / 2));
 
   return (
     <>

@@ -26,7 +26,7 @@ function Blog({bth}) {
 
             if (response.ok) {
                 setBlogs(json);
-                console.log(json.comments)
+                // console.log(json.comments)
             }
         } catch (error) {
             console.error('Error fetching blog:', error);
@@ -42,6 +42,7 @@ function Blog({bth}) {
             setBackToHome('/dashboard');
         }
     }, [id, bth]);
+    console.log(user)
 
     useEffect(() => {
         if (blogs && user) {
@@ -81,7 +82,7 @@ function Blog({bth}) {
             });
             if (response.ok) {
                 // Refresh the blog data to display the newly added comment
-                console.log(response)
+                // console.log(response)
                 fetchBlogs();
                 setCommentInput(''); // Clear the comment input field after submission
             } else {

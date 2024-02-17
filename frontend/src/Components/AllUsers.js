@@ -38,7 +38,7 @@ const AllUsers = () => {
             })
         }, 500);
     })
-    console.log(users)
+    // console.log(users)
     const scrollToTop = () =>{
         window.scrollTo({
             top: 0,
@@ -56,7 +56,8 @@ const AllUsers = () => {
                         <div className="blog_cont allUser_cont " key={user._id}>
                                 <img src={profile} alt="profile" className='profileImg'/>
                                 <div className="ltDesc uiDesc" style={uWidth}>
-                                 {user.email}
+                                    {user.email}
+                                    <p style={{color: user.userType === 'Admin' ? 'red':'#00ff00'}}>{user.userType}</p>
                                 </div>
                         </div> 
                 ))}

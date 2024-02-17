@@ -22,7 +22,7 @@ function Featured() {
 
             if (response.ok) {
                 setBlogs(json[0]);
-                console.log("featuredComp: ",json)
+                // console.log("featuredComp: ",json)
             }
         } catch (error) {
             console.error('Error fetching blog:', error);

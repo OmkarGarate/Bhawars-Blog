@@ -32,6 +32,8 @@ import OfficeLife from "./Components/OfficeLife";
 import ManageBlogs from "./Components/ManageBlogs";
 import UpdateBlog from "./Components/UpdateBlog";
 import AllUsers from "./Components/AllUsers";
+import AdminLogin from "./Components/AdminLogin";
+import AdminSignup from "./Components/AdminSignup";
 
 function App() {
   return (
@@ -158,6 +160,8 @@ function App() {
         </Route>
 
         <Route path="/login" element={<SignIn />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/adminsignup" element={<AdminSignup />} />
         <Route path="/register" element={<CreateAc />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/createBlog" element={<CreateBlog />} />

@@ -22,7 +22,7 @@ export default function DashboardInner() {
       
         
     }, [])
-    console.log(blogs)
+    // console.log(blogs)
 
     useEffect(() => {
         const fetchUsers = async ()=>{
@@ -37,7 +37,7 @@ export default function DashboardInner() {
       
         
     }, [])
-    console.log(users)
+    // console.log(users)
 
   return (
     <div className='dsh-inner'>
@@ -63,8 +63,7 @@ export default function DashboardInner() {
                                 <div className="ltd content-short2">{blog.contentDesc}</div>
                             </div>
                         </Link> 
-           
-        ))}
+                        ))}
                 </div>
             </div>
             <div className="users bu">
@@ -77,6 +76,7 @@ export default function DashboardInner() {
                                 <img src={profile} alt="profile" className='profileImg'/>
                                 <div className="ltDesc uiDesc">
                                  <i>{user.email}</i>
+                                 <p style={{color: user.userType === 'Admin' ? 'red':'#00ff00'}}>{user.userType}</p>
                                 </div>
                         </div> 
                         ))}

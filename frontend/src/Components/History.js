@@ -36,7 +36,7 @@ function History({cat}) {
       const [blogs, setBlogs] = useState(null);
     const { user } = useAuthContext();
     const location = useLocation(); // This gives you the current path
-console.log("Current URL path:", location.pathname);
+// console.log("Current URL path:", location.pathname);
 
 const cats = [
   { cat: "2D Sol", pathP: '/popular', pathL: '/' },
@@ -76,7 +76,7 @@ const catPathL = cats.find(c => c.cat === cat)?.pathL || '';
 
     }, []);
 
-    console.log(blogs);
+    // console.log(blogs);
     
       const [slide, setSlide] = useState({
         transform: "translateX(0px)",
@@ -114,8 +114,8 @@ const goToNext = () => {
     });
 };
 
-console.log(n);
-console.log(Math.ceil(numberOfBlogs / 2));
+// console.log(n);
+// console.log(Math.ceil(numberOfBlogs / 2));
 
   return (
     <>

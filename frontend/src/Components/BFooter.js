@@ -1,7 +1,12 @@
 import React from 'react'
 import footerimg from '../Images/footerimg.png';
+import { AuthContext } from '../context/AuthContext';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 function BFooter() {
+
+    const {user} = useAuthContext()
+
     return (
         <div className='UfooterMain'>
             <div className="ftop">
@@ -18,9 +23,18 @@ function BFooter() {
                     <div className="nlew">
                         
                         <p>Newsletter every week</p>
-                        <div className="lct">
+                        {user?(
+                            <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider round"></span>
+                        </label>
+                        ):(
+                            <div className="lct">
                             <button id='lct-btn'>Sign In</button>
                         </div>
+                        )}
+                        
+                        
                         
                     </div>
                 </div>

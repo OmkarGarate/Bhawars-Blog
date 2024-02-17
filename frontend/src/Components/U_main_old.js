@@ -33,14 +33,14 @@ function U_main() {
         }
           fetchBlogs()  
     }, [])
-    console.log(searchQuery)
+    // // console.log(searchQuery)
   
 
     const filteredItems = Array.isArray(blogs) ? blogs.filter((item) =>
     searchQuery === '' || !item.blogHead ? false : item.blogHead.toLowerCase().includes(searchQuery.toLowerCase())
 ) : [];
 
-console.log(filteredItems)
+// // console.log(filteredItems)
     
 const handleSearch = (e) => {
   setSearchQuery(e.target.value);

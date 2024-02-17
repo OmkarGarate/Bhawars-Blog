@@ -9,7 +9,7 @@ import '../css/allusers.css'
 
 const Users = () => {
     const [users, setUsers]=useState(null)
-    console.log(users)
+    // console.log(users)
     const scrollToTop = () =>{
         window.scrollTo({
             top: 0,
@@ -27,6 +27,7 @@ const Users = () => {
                                 <img src={profile} alt="profile" className='profileImg'/>
                                 <div className="ltDesc uiDesc">
                                  {user.email}
+                                 {user.userType}
                                 </div>
                         </Link> 
                 ))}

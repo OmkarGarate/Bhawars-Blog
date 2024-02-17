@@ -30,7 +30,7 @@ export default function ManageBlogs() {
         }
         
     }, [user])
-    console.log(blogs)
+    // console.log(blogs)
 
     const scrollToTop = () =>{
         window.scrollTo({
