@@ -183,11 +183,11 @@ body::-webkit-scrollbar {
 }
 
 /* dashboard Inner  */
-.dsh-inner{
+/* .dsh-inner{ */
     /* border: 1px solid black; */
     /* background-image: linear-gradient(135deg, #0f81d6, #400bf7,  #c70cc1);
     height: 85vh; */
-}
+/* } */
 
 .dsh-inner .dshTop{
     width: 78%;

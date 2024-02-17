@@ -588,10 +588,10 @@
   justify-content: center;
 }
 
-.lphNav {
+/* .lphNav { */
   /* border: 1px solid black; */
   /* display: flex; */
-}
+/* } */
 
 .lup {
   /* border: 1px solid black; */
@@ -735,7 +735,7 @@
   height: 110px;
   border-radius: 50px;
   left: 45px;
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   filter: blur(40px);
   animation: 5s rotateGrad infinite;
   bottom: -40px;
@@ -770,9 +770,9 @@
   width: 100%;
 }
 
-.exploreMore {
+/* .exploreMore { */
   /* border: 1px solid black; */
-}
+/* } */
 
 .exploreMore h1 {
   margin: 50px 0;
