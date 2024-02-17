@@ -26,6 +26,9 @@ function TopNav() {
         <img src={logo} alt="logo" className='logo'/>
         {user ? ( <div className="snr">
         <p>{user.user.email}</p>
+        { user.user.userType === 'Admin' ? (
+          <Link to={'/dashboard'} className='dashLink'>Dashboard</Link>
+        ):(null)}
         <button className="logout" onClick={handleClick}>
             Log out
             </button>

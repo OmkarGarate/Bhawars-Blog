@@ -52,7 +52,7 @@ function SignIn() {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [userType, setUserType] = useState('')
+  const [userType, setUserType] = useState('User')
   const [secretKey, setSecretKey] = useState('')
   const [errorM, setErrorM] = useState('');
   const [conf, setConf] = useState("");
@@ -67,8 +67,8 @@ function SignIn() {
     if (userType === "User") {
       await loginUser(email, password);
       if (errorU === null) {
-        console.log('Successfully Logged in as a User', email, password);
-        setConf("Successfully Logged In as a User");
+        console.log('Exploring in as a User', email, password);
+        setConf("Exploring In as an User");
         setErrorM(false)
         setTimeout(() => {
           navigate('/');
@@ -80,8 +80,8 @@ function SignIn() {
     } else {
       await loginAdmin(email, password, secretKey);
       if (error === null) {
-        console.log('Successfully Logged in as an Admin', email, password, secretKey);
-        setConf("Successfully Logged In as an Admin");
+        console.log('Exploring in as an Admin', email, password, secretKey);
+        setConf("Exploring In as an Admin");
         setErrorM(false)
         setTimeout(() => {
           navigate('/dashboard');
@@ -93,7 +93,6 @@ function SignIn() {
     }
   }
   
-
   return (
     <>
       <div className="signIn">
@@ -110,7 +109,7 @@ function SignIn() {
               <span>New Member?</span><Link to={'/register'}> Create an account</Link>
             </div>
             <div className="RadioBtns">
-              <div><input type="radio" name="userType" value="User" onChange={(e)=>setUserType(e.target.value)}/>User</div>
+              <div><input type="radio" name="userType" value="User" onChange={(e)=>setUserType(e.target.value)}/ >User</div>
               <div><input type="radio" name="userType" value="Admin" onChange={(e)=>setUserType(e.target.value)}/>Admin</div>
             </div>
             {userType==="Admin"?

@@ -7,7 +7,7 @@ function BottomNav() {
     <div className='bottomNav'>
         <Link to={'/manageBlog'}>Manage Blogs</Link>
         <Link to={'/createblog'}><img src={plus} alt="plus" /></Link>
-        <Link>Users</Link>
+        <Link to={'/allusers'}>Users</Link>
     </div>
   )
 }

@@ -297,33 +297,37 @@
 
 .searchedEle {
   width: 30%;
+  /* height: 300px; */
+  /* overflow-y: scroll; */
   margin: 10px auto;
   /* padding: 10px; */
-  background: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.4)
-  );
+  background: #ffffff00;
+  -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem rgb(0 0 0 / 30%);
   border-radius: 10px;
   position: absolute;
   left: 35%;
   z-index: 1;
+  scrollbar-width: 0;
 }
 
 .searchedEle li {
   list-style: none;
   margin: 5px 10px;
   cursor: pointer;
-  color: black;
-  font-weight: 500;
-  /* display: block; */
+  color: white;
+  font-weight: 400;
+  /* transition: 0.3s ease-in; */
 }
 
 .searchedEle a {
   text-decoration: none;
+  
+}
+
+.searchedEle li:hover{
+  font-weight: 500;
 }
 
 .fb-pb {
@@ -820,7 +824,7 @@
   border: none;
   padding: 10px 15px;
   border-radius: 20px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   box-shadow: 2px 2px 5px 0px gray;
   cursor: pointer;
   background-color: white;

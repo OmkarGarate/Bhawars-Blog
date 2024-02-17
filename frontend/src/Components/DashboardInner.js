@@ -41,10 +41,16 @@ export default function DashboardInner() {
 
   return (
     <div className='dsh-inner'>
+            
+        <div className="dshTop">
+        <Link to={'/'} className="bth">Back to home</Link>
         <h1>Dashboard</h1>
+        </div>
+
         
         <img src={bgImg1} alt="bgImg1" className="bgImg1" />
         <div className="dsh-bu">
+            
             <div className="blogs bu">
                 <h2>Blogs</h2>
                 <div className="all_blogs">

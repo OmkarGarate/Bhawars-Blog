@@ -208,7 +208,7 @@ console.log(Math.ceil(numberOfBlogs / 2));
           ))}
         </div>
       </div>
-    ):(<p>Loading....</p>)}
+    ):(<p className='loading'>Loading....</p>)}
     </>
   )
 }

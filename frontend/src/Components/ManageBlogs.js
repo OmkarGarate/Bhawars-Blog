@@ -43,7 +43,10 @@ export default function ManageBlogs() {
         
         <TopNav topLeft="Dashboard"/>
         <div className="dsh-inner di">
+            <div className="dshTop">
+            <Link to={'/dashboard'} className="bth">Back to home</Link>
             <h1>Manage Blogs</h1>
+            </div>
             <img src={bgImg1} alt="bgImg1" className="bgImg1" />
             <div className="all_blogs mb_all">
             {blogs && blogs.map((blog)=>(

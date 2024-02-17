@@ -18,7 +18,7 @@ function U_main() {
   const [blogs, setBlogs]=useState(null)
   const [searchQuery, setSearchQuery] = useState('');
   const [seStyle, setSeStyle] = useState({
-    'padding': '0'
+    'height':'0'
   })
   const { user } = useAuthContext();
 
@@ -44,6 +44,9 @@ console.log(filteredItems)
     
 const handleSearch = (e) => {
   setSearchQuery(e.target.value);
+  setSeStyle({
+    height: "max-content"
+  })
 };
 return (
   <div className='u_Main'>
