@@ -56,34 +56,6 @@ const loginAdmin = async (req, res) =>{
 
 //signup user
 const signupUser = async (req, res) =>{
-
-    // const {email, firstName, lastName, password, country, userType, secretKey} = req.body
-
-    // try{
-    //     const existingUser = await User.findOne({email: email});
-    //     if(existingUser){
-    //         return res.status(400).json({message: "User already exists"});
-    //     }
-    //     const hashedPasssword = await bcrypt.hash(password, 10);
-
-    //     const result = await User.signup({
-    //         email: email,
-    //         firstName: firstName,
-    //         lastName: lastName,
-    //         password: hashedPasssword,
-    //         country: country,
-    //         userType: userType, 
-    //         secretKey: secretKey
-    //     })
-
-    //     //create a token 
-    //     const token = jwt.sign({email: result.email, id: result._id}, process.env.SECRET)
-
-    //     res.status(200).json({user: result, token: token})
-    // }catch (error){
-    //     res.status(400).json({error: error.message})
-    // }   
-
     const {email, firstName, lastName, password, userType, secretKey} = req.body
 
     try{
