@@ -2,9 +2,7 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcrypt')
 
-const Schema = mongoose.Schema
-
-const userSchema = new Schema({
+const userSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -33,10 +31,10 @@ const userSchema = new Schema({
 })
 
 //static signup method
-userSchema.statics.signup = async function(email, firstName, lastName, password, userType, secretKey){
+userSchema.static.signup = async function(email, firstName, lastName, password, userType, secretKey){   
 
     //validation
-    if(!email || !password)
+    if(!email || !password || !firstName || !lastName || !userType)
     {
         throw Error("All fields must be filled")
     }

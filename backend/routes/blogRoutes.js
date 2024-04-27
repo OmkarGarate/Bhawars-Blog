@@ -119,6 +119,7 @@ router.delete('/:id', async(req, res)=>{
     res.status(200).json(blog)
 })
 
+//update a blog
 router.patch('/:id', upload.single('uploaded_file'), async(req, res) => {
     try {
         const { id } = req.params;

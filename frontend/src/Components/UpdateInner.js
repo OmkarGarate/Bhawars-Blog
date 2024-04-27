@@ -17,7 +17,7 @@ export default function UpdateInner() {
   const [category, setCategory] = useState("");
   const [contentImage, setContentImage] = useState(null);
   const [error, setError] = useState(null)
-  const [conf, setConf] = useState("");
+  const [conf, setConf] = useState("");     
   const {user} = useAuthContext()
   const [featured, setFeatured] = useState('Feature')
   
