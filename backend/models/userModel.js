@@ -2,9 +2,7 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcrypt')
 
-const Schema = mongoose.Schema
-
-const userSchema = new Schema({
+const userSchema = mongoose.Schema({
     email: {
         type: String,
         required: true,

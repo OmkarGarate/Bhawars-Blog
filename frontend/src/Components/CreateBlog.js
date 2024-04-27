@@ -59,6 +59,7 @@ function CreateBlog() {
         setCategory("");
         setContentImage(null);
         setError(null);
+      
         setConf("Successfully created a blog")
         // console.log("New blog added", json);
       }
