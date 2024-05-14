@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import bhawar_logo from "../Images/bhawar_logo.png";
 import view_pass from "../Images/view_pass.png";
 import hide_pass from "../Images/hide_pass.png";
-import "../css/frontend.css";
-import '../css/createacmq.css'
+// import "../css/frontend.css";
+import '../css/createacmq.css';
 import sampleimg from "../Images/sampleimg.png";
 import CountrySelector from "./CountrySelector";
 
@@ -55,7 +55,7 @@ const DoubleRadioButton = () => {
   );
 };
 
-function CreateAc() {
+function CreateAc2() {
   const [isVisible, setIsVisible] = useState(true);
 
   const vClick = () => {
@@ -144,4 +144,4 @@ function CreateAc() {
   );
 }
 
-export default CreateAc;
+export default CreateAc2;

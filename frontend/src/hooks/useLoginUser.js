@@ -11,7 +11,7 @@ export const useLoginUser = () => {
         setIsLoadingU(true)
         setErrorU(null)
 
-        const response = await fetch('/users/loginUser', {
+        const response = await fetch('http://localhost:5000/users/loginUser', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})

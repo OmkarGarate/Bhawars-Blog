@@ -7,7 +7,7 @@
 
 .blogInner{
     /* border: 1px solid white; */
-    width: 75%;
+        /* width: 75%; */
     margin:0 auto;
     /* margin-top: 30px; */
     position: relative;
@@ -74,7 +74,7 @@
     background-color: #00012bbf;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    padding:50px;
+    /* padding:50px; */
     /* height: 500px; */
     margin: 30px 0;
     display: flex;
@@ -91,28 +91,28 @@
     /* border: 1px solid white; */
     display: flex;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
     margin-top: 150px;
 }
 
-.reactions img{
+/* .reactions img{
     width: 30px;
-}
+} */
 
 .reactions .like{
     /* border: 1px solid white; */
     background-color: white;
-    padding: 10px;
+    /* padding: 10px;
     width: 30px;
-    height: 30px;
+    height: 30px; */
     border-radius: 50px;
     box-shadow: 0px 5px 10px #9A9A9A;
     cursor: pointer;
 }
 
-.like img{
+/* .like img{
     width: 30px;
-}
+} */
 
 .comment{
     /* border: 1px solid white; */
@@ -124,7 +124,7 @@
 
 .comment input{
     padding: 5px;
-    width: 350px;
+    /* width: 350px; */
     background-color: transparent;
     border: none;
     font-size: 1rem;

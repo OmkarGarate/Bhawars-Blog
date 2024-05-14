@@ -1,15 +1,53 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .blogInner{
+    width: 90%;
+  }
+
+  .snr{
+    justify-content: space-between;
+    width: 100%;
+
+  }
+
+  .comment{
+    width: 100%;
+  }
+
+  .blogContent{
+    padding: 20px;
+  }
+
+  .reactions{
+    gap: 10px;
+  }
+
+  .reactions .like{
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .comment input{
+    width: 100%;
+  }
+
+  .like img {
+    width: 20px;
+  }
+  
   .topNav img {
     width: 120px;
   }
 
   .topNav {
     padding: 20px 20px;
+    flex-direction: column;
   }
 
   .topNav button {
     padding: 5px 6px;
     font-size: 0.5rem;
+    width: max-content;
   }
 
   .search_comp {
@@ -121,7 +159,7 @@
   }
 
   .pContent {
-    height: 180px;
+    /* height: 180px; */
     gap: 10px;
     width: 240px;
   }
@@ -610,8 +648,40 @@
     padding: 0 10px 20px 10px;
   }
 }
+/* changed 1028 to 2560 */
+@media (min-width: 768px) and (max-width: 2560px) {
 
-@media (min-width: 768px) and (max-width: 1028px) {
+  .blogInner{
+    width: 75%;
+  }
+
+  .blogContent{
+    padding: 50px;
+  }
+
+  .comment input{
+    width: 350px;
+  }
+
+  .reactions{
+    gap: 30px;
+  }
+
+  .reactions .like{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .reactions img{
+    width: 30px;
+}
+
+  .like img{
+    width: 30px;
+}
+
+
   .elVr {
     width: 50px;
     height: 520px;
@@ -687,7 +757,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
   .fnp {
     gap: 100px;
     padding: 50px 0;
@@ -874,10 +944,12 @@
   .sidebar {
     align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: column;
+    width: 30%;
   }
 }
 
-/* @media screen and (min-width: 1534px) and (max-width: 2560px){
+ /* @media screen and (min-width: 1534px) and (max-width: 2560px){
     .lph {
         width: 47%;
         height: 400px;
@@ -902,4 +974,4 @@
 
     }
 
-} */
+}  */

@@ -11,7 +11,7 @@ export default function DashboardInner() {
 
     useEffect(() => {
         const fetchBlogs = async ()=>{
-        const response = await fetch("/blogs");
+        const response = await fetch("http://localhost:5000/blogs");
             const json = await response.json()
 
             if(response.ok){
@@ -26,7 +26,7 @@ export default function DashboardInner() {
 
     useEffect(() => {
         const fetchUsers = async ()=>{
-        const response = await fetch("/users");
+        const response = await fetch("http://localhost:5000/users");
             const json = await response.json()
 
             if(response.ok){
@@ -56,7 +56,7 @@ export default function DashboardInner() {
                 <div className="all_blogs">
                         {blogs && blogs.map((blog)=>(
                         <Link className="blog_cont" key={blog._id} to={`/admin/blog/${blog._id}`}>
-                                <img src={`http://localhost:3000/uploads/${blog.contentImage}`} alt="" />
+                                <img src={`http://localhost:5000/uploads/${blog.contentImage}`} alt="" />
                                 <div className="ltDesc">
                                 <i>{blog.category}</i>
                                 <div className="ltHead">{blog.contentHead}</div>

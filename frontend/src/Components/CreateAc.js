@@ -9,9 +9,7 @@ import CountrySelector from "./CountrySelector";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useSignup from "../hooks/useSignup";
-// import '../css/createacmq.css';
-
-
+import '../css/createacmq.css';
 
 function CreateAc() {
   const [passInput, setPassInput] = useState('password')
@@ -82,7 +80,7 @@ function CreateAc() {
   const [lastName, setLName] = useState('')
   const [password, setPassword] = useState('')
   const [userType, setUserType] = useState('User')
-  const [secretKey, setSecretKey] = useState(null)
+  const [secretKey, setSecretKey] = useState("")
   const [likes, setLikes] = useState({})
   const [conf, setConf] = useState("");
    

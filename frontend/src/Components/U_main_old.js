@@ -1,11 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import TopNav from './TopNav'
-// import '../css/user.css'
+import '../css/user.css'
 import '../css/footer.css'
 import "../css/frontend.css"
+import '../css/createacmq.css';
 import "../css/lph.css";
-// import "../css/umainmq.css"
+import "../css/umainmq.css"
 import searchIcon from '../Images/search.png'
 import BlogPage from './BlogPage'
 import FnP from './FnP'
@@ -24,7 +25,7 @@ function U_main() {
 
     useEffect(() => {
         const fetchBlogs = async ()=>{
-        const response = await fetch("/blogs")
+        const response = await fetch("http://localhost:5000/blogs")
             const json = await response.json()
 
             if(response.ok){

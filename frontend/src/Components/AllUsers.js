@@ -15,7 +15,7 @@ const AllUsers = () => {
     })
     useEffect(() => {
         const fetchBlogs = async ()=>{
-        const response = await fetch("/users", {
+        const response = await fetch("http://localhost:5000/users", {
             headers:{
                 'Authorization': `Bearer ${user.token}`
             }

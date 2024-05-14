@@ -17,7 +17,7 @@ function Featured() {
       // Define fetchBlogs function
       const fetchBlogs = async () => {
         try {
-            const response = await fetch(`/featured/blog`);
+            const response = await fetch(`http://localhost:5000/featured/blog`);
             const json = await response.json();
 
             if (response.ok) {
@@ -40,7 +40,7 @@ function Featured() {
             <p>Featured</p>
         </div>
         <div className="fContent">
-        <img src={`http://localhost:3000/uploads/${blogs.contentImage}`} alt="" className='blogImg'/>
+        <img src={`http://localhost:5000/uploads/${blogs.contentImage}`} alt="" className='blogImg'/>
             <div className="fTheory">
                 <i>{blogs.category}</i>
                 <h1>{blogs.blogHead}</h1>

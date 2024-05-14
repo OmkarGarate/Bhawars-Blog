@@ -61,7 +61,7 @@ const catPathL = cats.find(c => c.cat === cat)?.pathL || '';
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch("/blogs");
+                const response = await fetch("http://localhost:5000/blogs");
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
                 }
@@ -191,7 +191,7 @@ const goToNext = () => {
                 <div className="elEve" key={index}>
                   {eve && (
                     <Link to={`/user/blog/${eve?._id}`} className="fContent">
-                      <img src={`http://localhost:3000/uploads/${eve.contentImage}`} alt="" />
+                      <img src={`http://localhost:5000/uploads/${eve.contentImage}`} alt="" />
                       <div className="fTheory">
                         {/* <p>{cat}</p> */}
                         <i>{eve.category}</i>

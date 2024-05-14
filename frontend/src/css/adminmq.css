@@ -1,0 +1,78 @@
+
+@media (max-width: 768px) {
+    .dsh-bu{
+        flex-direction: column;
+    }
+    
+    .bu{
+        width: 80%;
+    }
+
+    .blog_cont .profileImg {
+        width: 35px;
+        /* border: 1px solid black; */
+        height: 35px;
+        /* border-radius: 50px; */
+        margin-right: 10px;
+    }
+    .allUser_cont{
+        height: 35px;
+    }
+
+    .ua{
+        width: 90%;
+    }
+
+    .uiDesc{
+        width: 70%;
+        font-size: 0.8rem;
+    }
+
+    .createBlogInner{
+        width: 90%;
+    }
+
+    .crBlogDesc{
+        padding: 20px;
+    }
+
+    .createBlogInner form input{
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media (max-width: 650px){
+    .allUsers{
+        display: block;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1440px) {
+    .allUsers{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 475px) {
+    .snr .dashLink{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .allUsers{
+        display: block;
+    }
+}
+
+
+.all_blogs a{
+    position: relative;
+}
+
+.edit_btns{
+    position: absolute;
+    right: 0;
+    top: 5px;
+}

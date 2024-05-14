@@ -24,7 +24,7 @@ export default function UpdateInner() {
 //to fetch the data
     useEffect(() => {
         const fetchBlog = async ()=>{
-        const response = await fetch(`/blogs/${id}`);
+        const response = await fetch(`http://localhost:5000/blogs/${id}`);
             const json = await response.json()
 
             if(response.ok){
@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
     formData.append("uploaded_file", contentImage);
   
     try {
-      const response = await fetch(`/blogs/${id}`, {
+      const response = await fetch(`http://localhost:5000/blogs/${id}`, {
         method: 'PATCH',
         body: formData
       });
@@ -91,7 +91,7 @@ const handleClick = async ()=>{
     return
   }
   alert('Blog Deleted Successfully!!')
-  const response = await fetch(`/blogs/${id}`, {
+  const response = await fetch(`http://localhost:5000/blogs/${id}`, {
     method: 'DELETE'
   })
 
@@ -106,7 +106,7 @@ const handleFeatured = async () => {
 
       const formData = new FormData();
       formData.append("blogId", id);
-      const response = await fetch(`/featured/${id}`, {
+      const response = await fetch(`http://localhost:5000/featured/${id}`, {
         method: "POST",
         body: formData
       });
@@ -193,7 +193,7 @@ const handleFeatured = async () => {
             />
             </h2>
             {blog && blog.contentImage && (
-                <img src={`http://localhost:3000/uploads/${blog.contentImage}`} alt="" className='blogImg'/>
+                <img src={`http://localhost:5000/uploads/${blog.contentImage}`} alt="" className='blogImg'/>
             )}
 
             <input

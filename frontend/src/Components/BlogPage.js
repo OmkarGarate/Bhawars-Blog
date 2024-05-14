@@ -10,7 +10,7 @@ function BlogPage() {
 
     useEffect(() => {
         const fetchBlogs = async ()=>{
-            const response = await fetch("/blogs")
+            const response = await fetch("http://localhost:5000/blogs")
             const json = await response.json()
 
             if(response.ok){
@@ -34,7 +34,7 @@ function BlogPage() {
               <li>{item.blogHead}</li>
               <li>{item.contentHead}</li>
               <li>{item.contentDesc}</li>
-              <img src={`http://localhost:3000/uploads/${item.contentImage}`} alt="" />
+              <img src={`http://localhost:5000/uploads/${item.contentImage}`} alt="" />
               <li >{likes}</li>
             </ul>
           </Link>

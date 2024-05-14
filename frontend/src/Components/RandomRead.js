@@ -13,7 +13,7 @@ function RandomRead() {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch("/blogs");
+                const response = await fetch("http://localhost:5000/blogs");
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
                 }
@@ -51,7 +51,7 @@ function RandomRead() {
               <div className="showRandom">Click to generate random blog</div>
             ):
               (<Link  to={`/user/blog/${data._id}`} className='fContent'>
-                <img src={`http://localhost:3000/uploads/${data.contentImage}`} alt="contentImage" />
+                <img src={`http://localhost:5000/uploads/${data.contentImage}`} alt="contentImage" />
             <div className="fTheory">
               <i>{data.category}</i>
               <h1>{data.blogHead}</h1>

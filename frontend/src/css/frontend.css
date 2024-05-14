@@ -10,15 +10,15 @@
 .createAc {
   /* border: 1px solid black; */
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
 }
 
 .sil {
   /* border: 1px solid black; */
   background-color: #1c3d6c;
-  width: 60%;
-  height: 100%;
+  /* width: 60%;
+  height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,8 +26,8 @@
 
 .sir {
   /* border: 1px solid black; */
-  width: 40%;
-  height: 100%;
+  /* width: 40%;
+  height: 100%; */
   /* background-color: #1c3d6c8c;
   opacity: 60%; */
   position: relative;
@@ -45,7 +45,7 @@
 
 .sif {
   /* border: 1px solid black; */
-  width: 55%;
+  /* width: 55%; */
   height: 65%;
   background-color: #001434b8;
   backdrop-filter: blur(10px);

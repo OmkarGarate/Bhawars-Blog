@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 
 .createBlog{
     background-color: #1B3C6E;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .topNav{

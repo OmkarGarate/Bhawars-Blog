@@ -10,7 +10,7 @@ function Popular() {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch("/blogs");
+                const response = await fetch("http://localhost:5000/blogs");
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
                 }
@@ -42,7 +42,7 @@ function Popular() {
                         blogs.map((item) => (
                             <Link to={`/user/blog/${item._id}`} key={item._id}>
                                 <ul className='pContent'>
-                                    <li className='pImgs'><img src={`http://localhost:3000/uploads/${item.contentImage}`} alt="" /></li>
+                                    <li className='pImgs'><img src={`http://localhost:5000/uploads/${item.contentImage}`} alt="" /></li>
                                     <li className="pT">
                                         <i>{item.blogHead}</i>
                                         <h4>{item.contentDesc}</h4>

@@ -6,9 +6,10 @@ import bgImg2 from '../Images/bgImg2.png';
 import like from '../Images/like.png';
 import likedImg from '../Images/liked.png';
 import triangle from '../Images/triangle.png';
-import time from '../Images/time.png';
+import time from '../Images/time.png';  
 import TopNav from './TopNav';
 import { useAuthContext } from '../hooks/useAuthContext';
+import '../css/umainmq.css'
 
 function Blog({bth}) {
     const [blogs, setBlogs] = useState('');
@@ -21,7 +22,7 @@ function Blog({bth}) {
     // Define fetchBlogs function
     const fetchBlogs = async () => {
         try {
-            const response = await fetch(`/blogs/${id}`);
+            const response = await fetch(`http://localhost:5000/blogs/${id}`);
             const json = await response.json();
 
             if (response.ok) {
@@ -134,7 +135,7 @@ function Blog({bth}) {
                         <div className="blogContent">
                             <div className="bcHead">{blogs.contentHead}</div>
                             <p>{splitContentDesc(blogs.contentDesc)[0]}</p>
-                            <img src={`http://localhost:3000/uploads/${blogs.contentImage}`} alt="" />
+                            <img src={`http://localhost:5000/uploads/${blogs.contentImage}`} alt="" />
                             <p>{splitContentDesc(blogs.contentDesc)[1]}</p>
                             <div className="reactions">
                                 <div className="like">

@@ -12,7 +12,7 @@ export const useSignup = () => {
         setError(null)
 
         console.log(email, firstName, lastName, password, userType, secretKey)
-        const response = await fetch('/users/signup', {
+        const response = await fetch('http://localhost:5000/users/signup', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, firstName, lastName, password, userType, secretKey})

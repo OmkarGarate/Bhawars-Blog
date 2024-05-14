@@ -34,6 +34,12 @@ import UpdateBlog from "./Components/UpdateBlog";
 import AllUsers from "./Components/AllUsers";
 import AdminLogin from "./Components/AdminLogin";
 import AdminSignup from "./Components/AdminSignup";
+import './css/umainmq.css'
+import './css/createacmq.css'
+import './css/adminmq.css'
+import CreateAc2 from "./Components/CreateAc2";
+
+
 
 function App() {
   return (
@@ -52,10 +58,10 @@ function App() {
               path="/asbuilt/popular"
               element={<PopularUp cat="As Built" />}
             />
-            <Route
+            {/* <Route
               path="/asbuilt/history"
               element={<History cat="As Built" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/procegg" element={<ProcessEng />}>
@@ -67,10 +73,10 @@ function App() {
               path="/procegg/popular"
               element={<PopularUp cat="Process Engineering" />}
             />
-            <Route
+            {/* <Route
               path="/procegg/history"
               element={<History cat="Process Engineering" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/model3d" element={<Model3D />}>
@@ -79,10 +85,10 @@ function App() {
               path="/model3d/popular"
               element={<PopularUp cat="Model 3D" />}
             />
-            <Route
+            {/* <Route
               path="/model3d/history"
               element={<History cat="Model 3D" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/corp" element={<Corporate />}>
@@ -91,7 +97,7 @@ function App() {
               path="/corp/popular"
               element={<PopularUp cat="Corporate" />}
             />
-            <Route path="/corp/history" element={<History cat="Corporate" />} />{" "}
+            {/* <Route path="/corp/history" element={<History cat="Corporate" />} />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/misc" element={<MisCel />}>
@@ -100,10 +106,10 @@ function App() {
               path="/misc/popular"
               element={<PopularUp cat="Miscellaneous" />}
             />
-            <Route
+            {/* <Route
               path="/misc/history"
               element={<History cat="Miscellaneous" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/reverse" element={<Reverse />}>
@@ -115,10 +121,10 @@ function App() {
               path="/reverse/popular"
               element={<PopularUp cat="Reverse Engineering" />}
             />
-            <Route
+            {/* <Route
               path="/reverse/history"
               element={<History cat="Reverse Engineering" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/analysis" element={<Analysis />}>
@@ -127,10 +133,10 @@ function App() {
               path="/analysis/popular"
               element={<PopularUp cat="Analysis" />}
             />
-            <Route
+            {/* <Route
               path="/analysis/history"
               element={<History cat="Analysis" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/detdes" element={<DetailedDes />}>
@@ -139,10 +145,10 @@ function App() {
               path="/detdes/popular"
               element={<PopularUp cat="Detailed Design" />}
             />
-            <Route
+            {/* <Route
               path="/detdes/history"
               element={<History cat="Detailed Design" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
           <Route path="/officelife" element={<OfficeLife />}>
@@ -151,10 +157,10 @@ function App() {
               path="/officelife/popular"
               element={<PopularUp cat="Office Life" />}
             />
-            <Route
+            {/* <Route
               path="/officelife/history"
               element={<History cat="Office Life" />}
-            />{" "}
+            />{" "} */}
             {/* Updated */}
           </Route>
         </Route>

@@ -17,7 +17,7 @@ export default function ManageBlogs() {
 
     useEffect(() => {
         const fetchBlogs = async ()=>{
-        const response = await fetch("/blogs");
+        const response = await fetch("http://localhost:5000/blogs");
             const json = await response.json()
 
             if(response.ok){
@@ -51,7 +51,7 @@ export default function ManageBlogs() {
             <div className="all_blogs mb_all">
             {blogs && blogs.map((blog)=>(
                 <Link className="blog_cont mb_bc" key={blog._id} to={`/updateBlog/${blog._id}`}>
-                        <img src={`http://localhost:3000/uploads/${blog.contentImage}`} alt="" />
+                        <img src={`http://localhost:5000/uploads/${blog.contentImage}`} alt="" />
                         <div className="ltDesc mb_desc">
                         <i>{blog.category}</i>
                         <div className="ltHead">{blog.contentHead}</div>
